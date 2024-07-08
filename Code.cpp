@@ -1,3 +1,5 @@
+//Please remember it instead of copy.
+
 #include<iostream>
 #include<cstdio>
 #include<cstring>
