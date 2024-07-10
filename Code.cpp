@@ -10,6 +10,9 @@
 #include<stack>
 #include<random>
 #include<queue>
+#include<map>
+#include<unordered_map>
+#include<set>
 using namespace std;
 
 namespace code{
