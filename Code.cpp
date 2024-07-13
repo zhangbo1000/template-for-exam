@@ -32,6 +32,17 @@ namespace code{
 	_Tp min(const _Tp& x,const _Rest&... rest){
 		return min(x,min(rest...));
 	}
+	char gtc(){
+		static char tmp[100000],*p1(0),*p2(0);
+		if(p1==p2)p2=(p1=tmp)+fread(tmp,1,100000,stdin);
+		return *p1++;
+	}
+	void read(int& x){
+		char c;
+		while((c=gtc())<'0');
+		x=c^'0';
+		while((c=gtc())>='0')x=(x<<1)+(x<<3)+(c^'0');
+	}
 	using ll=long long;
 	using uint=unsigned int;
 	using size_t=unsigned int;
@@ -46,7 +57,7 @@ namespace code{
 #ifdef DEBUG
 		freopen("1.txt","r",stdin);
 #endif
-		cin.tie(0)->sync_with_stdio(0);
+//		cin.tie(0)->sync_with_stdio(0);
 		return 0;
 	}
 }
